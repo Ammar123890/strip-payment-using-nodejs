@@ -23,7 +23,7 @@ app.use(router);
 
 //Connect Server
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Your app is running on PORT ${PORT}`);
 });
 
