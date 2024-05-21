@@ -2,10 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = require('./stripe');
 const cors = require("cors");
+const app = express();
 const http = require("http");
 const server = http.createServer(app);
+const socketIO = require('./socket')
 require("dotenv").config();
-const app = express();
+
 
 
 //Middlwares
