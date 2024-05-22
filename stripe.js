@@ -24,8 +24,8 @@ router.post('/payment-intent', async (req, res) => {
             amount: amount,  
             currency: currency,
             payment_method: paymentMethodId,
-            confirmation_method: 'manual',
-            confirm: true,
+            // confirmation_method: 'manual',
+            // confirm: true,
             return_url: returnUrl,
         });
 
