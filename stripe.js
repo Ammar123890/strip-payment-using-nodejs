@@ -26,7 +26,7 @@ router.post('/payment-intent', async (req, res) => {
             payment_method: paymentMethodId,
             // confirmation_method: 'manual',
             // confirm: true,
-            return_url: returnUrl,
+            //return_url: returnUrl,
         });
 
         res.status(200).json({
