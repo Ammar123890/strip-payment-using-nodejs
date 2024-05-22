@@ -14,7 +14,7 @@ const { getIo } = require('./socket');
  */
 
 router.post('/payment-intent', async (req, res) => {
-    const { amount, currency, paymentMethodId } = req.body;
+    const { amount, currency, paymentMethodId, returnUrl } = req.body;
     if(!amount || !currency || !paymentMethodId) {
         return res.status(400).json({ error: 'Invalid request' });
     }
@@ -26,6 +26,7 @@ router.post('/payment-intent', async (req, res) => {
             payment_method: paymentMethodId,
             confirmation_method: 'manual',
             confirm: true,
+            return_url: returnUrl,
         });
 
         res.status(200).json({
